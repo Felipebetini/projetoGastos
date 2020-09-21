@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <script src="../js/main.js"></script>
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <!--Todas as vezes em que a página é carregada, a função é chamada-->
+  <body onload="carregarTabela()">
+    <div class="container-fluid body"></div>
+
+    <div class="container-fluid divHead">
+      <h1 class="container-fluid headCadastro">Cadastrar Produto</h1>
+
+      <div class="container-fluid divRegistro">
+        <form class="form">
+          <input type="text" id="idProduto" placeholder="Produto" />
+          <input type="text" id="idPreco" placeholder="Preco" />
+          <input type="text" id="idQtd" placeholder="Quantidade" />
+          <button type="submit" id="login-button" onclick="cadastrarProduto()">
+            Registrar
+          </button>
+          <button id="sair" onclick="voltar()">
+            Sair
+          </button>
+        </form>
+        <div class="container-fluid divTable">
+          <table class="table table-hover table-active">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Quantidade</th>
+              </tr>
+            </thead>
+            <tbody id="idCorpoTabela"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
